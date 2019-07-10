@@ -52,7 +52,7 @@
 
 (defn- stringify
   [thing]
-  (if (or (map? thing) (string? thing) (number? thing) (sequential? thing))
+  (if (or (map? thing) (string? thing) (number? thing) (nil? thing) (true? thing) (false? thing) (sequential? thing))
     thing
     (str thing)))
 
